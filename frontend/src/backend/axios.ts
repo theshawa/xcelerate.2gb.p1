@@ -8,5 +8,5 @@ export const getErrorMessage = (error: any) => {
   if (error.isAxiosError) {
     return error.response?.data.message;
   }
-  return error.message;
+  return error.message || "Unknown error";
 };
